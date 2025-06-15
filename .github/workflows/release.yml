@@ -24,6 +24,9 @@ jobs:
           flutter-version: '3.32.4'
           channel: 'stable'
 
+      - name: Create .env file
+        run: echo "PIXABAY_API_KEY=${{ secrets.PIXABAY_API_KEY }}" > .env
+
       - name: Get dependencies
         run: flutter pub get
 
@@ -53,6 +56,9 @@ jobs:
         with:
           flutter-version: '3.32.4'
           channel: 'stable'
+
+      - name: Create .env file
+        run: echo "PIXABAY_API_KEY=${{ secrets.PIXABAY_API_KEY }}" > .env
 
       - name: Get dependencies
         run: flutter pub get
